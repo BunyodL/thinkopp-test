@@ -1,6 +1,6 @@
 import { formatDigits, formatWithDashes } from "@/app/utils/formatDigits";
 import { Controller, UseControllerProps } from "react-hook-form";
-import { FilmParametersFormData } from "../film-parameters-form/model/types";
+import { FilmParametersFormData } from "../form/model/types";
 import { Select, SelectProps } from "../ui/select";
 
 type Data = {

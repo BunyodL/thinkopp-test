@@ -1,5 +1,5 @@
 import { Controller, UseControllerProps } from "react-hook-form";
-import { FilmParametersFormData } from "../film-parameters-form/model/types";
+import { FilmParametersFormData } from "../form/model/types";
 import { Textarea, TextareaProps } from "../ui/textarea";
 
 type ControlledTextareaProps = UseControllerProps<FilmParametersFormData> &
