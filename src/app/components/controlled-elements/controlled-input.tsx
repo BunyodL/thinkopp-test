@@ -1,5 +1,5 @@
 import { Controller, UseControllerProps } from "react-hook-form";
-import { FilmParametersFormData } from "../film-parameters-form/model/types";
+import { FilmParametersFormData } from "../form/model/types";
 import { Input, InputProps } from "../ui/input";
 import { formatDigits, formatWithDashes } from "@/app/utils/formatDigits";
 
