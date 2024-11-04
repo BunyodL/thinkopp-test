@@ -1,5 +1,7 @@
 import { useFormContext } from "react-hook-form";
 import { useEffect, useMemo, useState } from "react";
+import { useLocalStorage } from "./useLocalStorage";
+import { DEFAULT_VALUES } from "../components/form/model/form-values";
 
 interface FormManagementReturn {
     nextButtonActive: boolean;
@@ -7,6 +9,7 @@ interface FormManagementReturn {
 }
 
 export const useFormManagement = (): FormManagementReturn => {
+    const [, setToStorage] = useLocalStorage("formData", DEFAULT_VALUES);
     const {
         reset,
         watch,
@@ -40,8 +43,17 @@ export const useFormManagement = (): FormManagementReturn => {
 
     //очищаем форму
     const clearForm = () => {
-        reset();
-        localStorage.removeItem("formData");
+        reset((prevValues) => ({
+            ...prevValues,
+            projectName: "",
+            genre: "",
+            format: "",
+            UND: "",
+            producingCountry: "",
+            estimatedCost: "",
+            synopsis: "",
+        }));
+        setToStorage(DEFAULT_VALUES);
     };
 
     return {
