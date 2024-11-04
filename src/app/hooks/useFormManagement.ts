@@ -9,9 +9,7 @@ interface FormManagementReturn {
 export const useFormManagement = (): FormManagementReturn => {
     const {
         reset,
-        // getValues,
         watch,
-
         formState: { errors },
     } = useFormContext();
 
@@ -39,11 +37,6 @@ export const useFormManagement = (): FormManagementReturn => {
 
         setNextButtonActive(isFullValid);
     }, [watchedFields, errors, requiredFirstStepFields]);
-
-    useEffect(() => {
-        const formData = watch();
-        localStorage.setItem("formData", JSON.stringify(formData));
-    }, [watch]);
 
     //очищаем форму
     const clearForm = () => {
