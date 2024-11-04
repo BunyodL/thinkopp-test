@@ -45,13 +45,7 @@ export const useFormManagement = (): FormManagementReturn => {
     const clearForm = () => {
         reset((prevValues) => ({
             ...prevValues,
-            projectName: "",
-            genre: "",
-            format: "",
-            UND: "",
-            producingCountry: "",
-            estimatedCost: "",
-            synopsis: "",
+            ...DEFAULT_VALUES,
         }));
         setToStorage(DEFAULT_VALUES);
     };
