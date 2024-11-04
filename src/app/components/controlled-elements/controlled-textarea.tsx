@@ -31,7 +31,7 @@ export const ControlledTextarea = ({
                         <div className="relative">
                             <label
                                 htmlFor={name}
-                                className="text-sm text-gray-600 mb-[14px] block"
+                                className="text-sm text-gray-600 mb-[14px] block max-sm:mb-2"
                             >
                                 {label}
                             </label>

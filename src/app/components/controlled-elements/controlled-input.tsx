@@ -44,7 +44,7 @@ export const ControlledInput = ({
                     <div className={`w-full ${isUnd && "md:mt-6"}`}>
                         <label
                             htmlFor={name}
-                            className="text-sm text-gray-600 block mb-[14px]"
+                            className="text-sm text-gray-600 block mb-[14px] max-sm:mb-2"
                         >
                             {label}
                         </label>

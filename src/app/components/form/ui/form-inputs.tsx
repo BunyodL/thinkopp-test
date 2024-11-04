@@ -13,8 +13,8 @@ export const FormInputs = () => {
     const genres = useGenres();
 
     return (
-        <div className="grid grid-cols-2 gap-[123px] max-lg:gap-24 max-md:grid-cols-1 max-md:gap-0">
-            <div className="grid gap-6">
+        <div className="grid grid-cols-2 gap-[123px] max-lg:gap-24 max-md:grid-cols-1 max-md:gap-6 max-sm:gap-4">
+            <div className="grid gap-6 max-sm:gap-4">
                 <ControlledInput
                     label="Название проекта"
                     name="projectName"
@@ -59,7 +59,7 @@ export const FormInputs = () => {
                 />
             </div>
 
-            <div className="grid gap-8">
+            <div className="grid gap-8 max-md:gap-6 max-sm:gap-4">
                 <ControlledSelect
                     label="Страна-производитель (копродукция)"
                     name="producingCountry"

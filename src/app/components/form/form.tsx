@@ -19,7 +19,7 @@ export function Form({ onNextStep }: FormProps) {
     return (
         <>
             <div className="max-w-6xl mx-auto p-6 h-full mb-6">
-                <div className={`flex justify-between items-start mb-12 ${styles.header}`}>
+                <div className={`flex justify-between items-start mb-12 max-sm:mb-6 ${styles.header}`}>
                     <Title>Производственные параметры фильма</Title>
                     <Button
                         variant="outlined"
