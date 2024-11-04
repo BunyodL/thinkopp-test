@@ -11,12 +11,14 @@ export const FilmParametersPage = () => {
         mode: "onChange",
         defaultValues: storageFormData,
     });
-    const { handleSubmit, getValues, trigger, watch } = methods;
+    const { handleSubmit, getValues, trigger } = methods;
 
     const handleNextStep = async () => {
         const isFormValid = await trigger();
         if (isFormValid) {
-            alert("Следующий шаг");
+            const formData = getValues();
+            setToStorage(formData);
+            alert("Данные сохранены");
         }
     };
 
@@ -25,13 +27,9 @@ export const FilmParametersPage = () => {
 
         if (isFormValid) {
             const formData = getValues();
+            setToStorage(formData);
             console.log(formData);
         }
-    };
-
-    const formData = watch();
-    const onChange = () => {
-        setToStorage(formData);
     };
 
     return (
@@ -39,7 +37,6 @@ export const FilmParametersPage = () => {
             <form
                 className="space-y-8"
                 onSubmit={handleSubmit(onSubmit)}
-                onChange={onChange}
             >
                 <Form onNextStep={handleNextStep} />
             </form>
